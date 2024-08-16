@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demos_master/screens/note_list.dart';
+import 'package:mytestaplication/screen_pages.dart/login_signin_page.dart';
 
 void main() {
-	runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-	@override
+  const MyApp({super.key});
+  @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-	    title: 'NoteKeeper',
-	    debugShowCheckedModeBanner: false,
-	    theme: ThemeData(
-		    primarySwatch: Colors.deepPurple
-	    ),
-	    home: NoteList(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const LoginSigninPage()
     );
   }
 }
